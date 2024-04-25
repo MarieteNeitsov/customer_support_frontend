@@ -6,8 +6,8 @@
       
         <div class="requests-list" v-for="(request, index) in requests" :key="index"> 
         <div class="request-box" :class="isSoonOrPassedDeadline(request.resolutionDeadline) ? 'red' : 'blue'">
-        <p>{{ request.description }}</p>
-        <p >Deadline: {{ formatDate(request.resolutionDeadline) }}</p>
+        <p id="description">{{ request.description }}</p>
+        <p id="deadline" >Deadline: {{ formatDate(request.resolutionDeadline) }}</p>
         
         </div>
         <div class="done" @click="markAsResolved(request.id)">Done</div>

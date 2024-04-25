@@ -6,7 +6,7 @@
         <label for="description">Request description:</label>
         <textarea name="description" rows="4" cols="50" v-model="requestDescription"></textarea>
         <label for="deadline">Request deadline:</label>
-        <vuedatepicker  name="deadline" v-model="requestDeadline"></vuedatepicker>
+        <vuedatepicker  id="datepicker" name="deadline" v-model="requestDeadline"></vuedatepicker>
       
         <button class="add-request" @click.prevent="submitForm" :disabled="!requestDescription || !requestDeadline">Add request</button>
         
@@ -75,6 +75,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 100px;
 
 }
 form textarea {
@@ -88,7 +89,7 @@ form textarea {
 form button {
     padding: 10px 20px;
     margin-top: 20px;
-    color: white;
+    color: black;
     border-radius: 20px;
     width: 100px;
     text-align: center;
